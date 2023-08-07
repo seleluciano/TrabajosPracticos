@@ -1,0 +1,12 @@
+Requerimientos Funcionales:
+* El sistema debe identificar la falta de stock minima de los materiales para cosntruir
+* El sistema debe tener las piezas necesarias para esamblar el producto
+* El sistema debe permitir confeccionar una nota de pedido con la materia prima necesaria
+* El sistema debe permitir registrar por que proceso paso el producto
+* El sistema debe permitir agregar stock a la base de datos
+* El sistema debe permitir registrar que pieza ha pasado por el control de calidad
+* El sistema debe permitir al jefe del control de calidad registrar un nuevo usuario 
+
+Requerimientos no Funcionales:
+* El sistema debe permitir restringuir el acceso 
+* El sistema debe permitir crear usuarios y permisos a las personas necesarias

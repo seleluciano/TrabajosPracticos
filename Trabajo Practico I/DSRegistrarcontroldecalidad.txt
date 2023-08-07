@@ -1,0 +1,11 @@
+title Registrar Control de Calidad
+Empleado->InterfazControl:Enviardatos(nombre,apellido,DNI)
+InterfazControl->GestorControl:Verificardatos(nombre,apellido,DNI)
+GestorControl->Encargado:Registrardatos(nombre,apellido,DNI)
+Empleado->InterfazControl:Enviardatospieza(tipo,nombre)
+InterfazControl->GestorControl:Verificardatos(tipo,nombre)
+GestorControl->Pieza:Registrardatos(tipo,nombre)
+Empleado->InterfazControl:EnviardatosContro(fecha,estado,hora)
+InterfazControl->GestorControl:Verificardatos(fecha,estado,hora)
+GestorControl->Control:Registrardatos(fecha,estado,hora)
+Se extiende a "Registrar Producto a Stock"

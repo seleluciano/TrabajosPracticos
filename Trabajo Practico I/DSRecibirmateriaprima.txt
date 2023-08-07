@@ -1,0 +1,6 @@
+title Recibir materia prima
+
+Proveedor->GestorMateriaPrima:Enviarmateriaprima() 
+GestorMateriaPrima->MateriaPrima:GuardarDatos(fecha,estado)
+MateriaPrima->ItemMateriaPrima:Guardarcantidad(stock)
+Se incluye a "Verificar estado" y ademas se puede extender a "Emitir Reclamo"
