@@ -1,0 +1,22 @@
+
+° Es uno de los patrones de diseño de software creados para facilitar el acceso y recorrido de elementos en 
+una colección de objetos sin exponer su estructura interna.
+
+ ° Es muy útil cuando se trabaja con listas, arrays, árboles u otras estructuras de datos.
+
+° Imagina que tienes una colección de datos, como una lista de números o una estructura de árbol,
+ y quieres recorrer sus elementos para realizar alguna operación. Tradicionalmente, 
+harías esto accediendo directamente a la estructura de la colección y recorriéndola usando bucles 
+o métodos específicos. El problema con este enfoque es que los algoritmos que realizan el recorrido 
+están estrechamente acoplados a la estructura interna de la colección.
+
+Por ejemplo, si tienes una lista enlazada y deseas recorrerla para obtener la suma de todos sus elementos, 
+deberías escribir un código específico para recorrer los nodos de la lista y obtener su valor. Luego, si 
+cambias la estructura de datos de la lista (por ejemplo, cambias de una lista enlazada a una matriz), 
+deberías modificar el algoritmo de recorrido para adaptarse a la nueva estructura.
+
+El patrón de diseño Iterator resuelve este problema separando el recorrido de la colección de su estructura
+interna. En lugar de acceder directamente a la colección, se utiliza un objeto especial llamado "Iterador" 
+que proporciona una interfaz común para recorrer los elementos sin exponer la estructura interna de la 
+colección.
+ 

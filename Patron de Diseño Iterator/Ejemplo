@@ -1,0 +1,37 @@
+# Sin este patron de diseño normalmente se recorre la lista del siguente modo:
+
+# Estructura interna de la colección (lista)
+lista_de_numeros = [2, 4, 6, 8, 10]
+
+# Recorrido tradicional
+suma = 0
+for num in lista_de_numeros:
+    suma += num
+print(suma)  # Salida: 30
+
+# En vez con el patron de diseño Iterator:
+
+# Implementación del patrón Iterator
+class IteradorLista:
+    def __init__(self, lista):
+        self.lista = lista
+        self.indice = 0
+
+    def hasNext(self):
+        return self.indice < len(self.lista)
+
+    def next(self):
+        valor = self.lista[self.indice]
+        self.indice += 1
+        return valor
+
+# Estructura interna de la colección (lista)
+lista_de_numeros = [2, 4, 6, 8, 10]
+
+# Utilizando el patrón Iterator
+iterador = IteradorLista(lista_de_numeros)
+suma = 0
+while iterador.hasNext():
+    suma += iterador.next()
+
+print(suma)  # Salida
