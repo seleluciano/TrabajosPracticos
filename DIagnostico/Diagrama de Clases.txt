@@ -1,0 +1,20 @@
+@startuml
+!theme reddress-lightred
+class Guia{
+nombre
+apellido
+CUIT
+domicilio
+telefono
+email
+ciudad
+pais de residencia 
+} 
+
+class "Servicio turistico"
+{
+tipo
+}
+"Servicio turistico" <|-- Guia
+
+@enduml
