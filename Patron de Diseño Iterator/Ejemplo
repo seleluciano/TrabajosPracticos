@@ -35,3 +35,18 @@ while iterador.hasNext():
     suma += iterador.next()
 
 print(suma)  # Salida
+
+#Explicación de los métodos:
+
+"""__init__(self, lista): El constructor recibe la lista que se va a recorrer y la guarda en una variable
+de instancia llamada lista. También se inicializa el atributo indice en 0, que servirá para mantener el
+seguimiento del índice actual mientras se recorre la lista.
+
+hasNext(self): Este método verifica si quedan más elementos por recorrer en la lista. 
+Retorna True si hay más elementos (el índice actual es menor que la longitud de la lista) o 
+False en caso contrario.
+
+next(self): Este método devuelve el siguiente elemento de la lista y avanza el índice al siguiente elemento.
+Es decir, obtiene el valor en el índice actual (self.indice), incrementa el índice en 1 (self.indice += 1) y
+luego devuelve el valor obtenido. De esta manera, cada vez que se llama a next(), se obtiene el siguiente 
+elemento de la lista. """

@@ -15,8 +15,20 @@ deberías escribir un código específico para recorrer los nodos de la lista y 
 cambias la estructura de datos de la lista (por ejemplo, cambias de una lista enlazada a una matriz), 
 deberías modificar el algoritmo de recorrido para adaptarse a la nueva estructura.
 
-El patrón de diseño Iterator resuelve este problema separando el recorrido de la colección de su estructura
-interna. En lugar de acceder directamente a la colección, se utiliza un objeto especial llamado "Iterador" 
-que proporciona una interfaz común para recorrer los elementos sin exponer la estructura interna de la 
-colección.
- 
+°Objetivos:
+      °Desacoplamiento: El patrón de diseño Iterator resuelve este problema separando el recorrido de la
+      colección de su estructurainterna. En lugar de acceder directamente a la colección, se utiliza un objeto 
+      especial llamado "Iterador" que proporciona una interfaz común para recorrer los elementos sin exponer 
+      la estructura interna de la colección.
+      °Reutilizacion: Proporciona una interfaz estandarizada para recorrer colecciones de objetos y 
+      no necesitan ser reescritos para diferentes tipos
+      °Abstracción de la Estructura Interna:  oculta los detalles de implementación y estructura interna
+      de una colección
+      °Flexibilidad: Cambiar la forma en que se almacenan los elementos en la colección no afecta a
+      los algoritmos de recorrido. Por lo tanto, es posible cambiar la estructura interna de la colección
+      sin afectar el código del cliente.
+      °Mantenibilidad: La separación entre el recorrido y la colección facilita la mantenibilidad del código.
+      Si se realizan cambios en la colección, los cambios se limitan al iterador y a la implementación de
+      la colección, sin afectar a los clientes que usan el iterador.
+      °Eficiencia: Mejorar la eficiencia del recorrido y permitir optimizaciones específicas para cada tipo de
+      colección.
