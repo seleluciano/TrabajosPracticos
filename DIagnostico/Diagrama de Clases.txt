@@ -14,7 +14,67 @@ pais de residencia
 class "Servicio turistico"
 {
 tipo
+descripcion
+ubicacion
+precio por persona
+fecha
+hora
 }
-"Servicio turistico" <|-- Guia
+class Cliente
+{
+nombre
+apellido
+CUIT
+domicilio
+telefono
+email
+ciudad
+pais
+}
+class Invitado
+{
+nombre
+apellido
+DNI
+}
+class Pedido
+{
+importe
+estado
+}
+class "Item pedido"
+{
+fecha
+hora
+}
+class Pago
+{
+importe
+fecha
+}
+class Estado
+{
+pendiente
+confirmado
+cancelado
+realizado
+en curso
+}
+class Insumo 
+{
+cantidad
+precio
+condicion
+}
+
+"Servicio turistico" "1..1*" --  "1" Guia
+"Servicio turistico" "1" -- "1..1*" "Item pedido"
+Pedido "1"-- "1..1*" "Item pedido"
+Cliente "1"--"1..1*" Pedido
+Insumo "0..1*"-- "0..1*" "Servicio turistico" 
+Invitado -- Cliente
+Pago "1..1*"-- "1"Pedido
+Pedido .. Estado
+
 
 @enduml
