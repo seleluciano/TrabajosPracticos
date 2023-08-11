@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+actor Cliente
+actor Tiempo
+actor Proveedor
+
+package "Fabricacion de empanadas"{
+  usecase "Registrar consulta"
+  usecase "Registrar pedido"
+  usecase "Registrar cliente"
+  usecase "Emitir diariamente listado de stock de materia prima"
+  usecase "Registrar entrega de materia prima"
+  usecase "Emitir semanalmente de pedidos y sus estados"
+  usecase "Registrar entrega de pedido" 
+}
+
+
+Cliente --> "Registrar consulta"
+Cliente --> "Registrar pedido"
+"Registrar cliente" "<<extend>>" ..> "Registrar pedido"
+Tiempo--> "Emitir diariamente listado de stock de materia prima"
+Proveedor --> "Registrar entrega de materia prima"
+Tiempo --> "Emitir semanalmente de pedidos y sus estados"
+Cliente --> "Registrar entrega de pedido"
+@endumll

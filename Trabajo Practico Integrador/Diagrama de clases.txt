@@ -1,0 +1,39 @@
+@startuml
+!theme reddress-lightred
+
+class Cliente{
+nombre
+apellido
+domicilio
+telefono
+}
+class Pedido{
+Estado
+importe
+fecha
+}
+class ItemPedido{
+cantidad
+}
+class Estado{
+confirmado
+pendiente
+cancelado
+}
+class Producto{
+tipo
+precio por unidad
+precio por docena
+fecha de elaboracion
+fecha de vencimiento
+stock 
+}
+
+
+Cliente "1"-- "1..1*"Pedido
+Pedido "1"-- "1..1*" ItemPedido
+ItemPedido "1..1*"--"1" Producto
+Pedido .. Estado
+
+
+@enduml
