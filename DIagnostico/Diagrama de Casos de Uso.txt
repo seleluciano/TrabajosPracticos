@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+actor Cliente
+actor Guia
+actor Gateway
+actor AFIP
+actor Logistica
+actor Proveedor
+
+package "Servicios Turisticos"{
+  usecase "Registrar consulta"
+  usecase "Registrar pedido"
+  usecase "Registrar cliente"
+  usecase "Confirmar pago"
+  usecase "Registrar pago"
+  usecase "Emitir mensualmente listado de insumo por tipo de servicio"
+  usecase "Emitir orden de compra de insumos para proveedor"
+  usecase "Registrar solicitud"
+  usecase "Verificar CUIT"
+  usecase "Registrar Guia"
+}
+Cliente --> "Registrar consulta"
+Cliente --> "Registrar pedido"
+Cliente --> "Registrar pago"
+Gateway --> "Confirmar pago"
+"Registrar pedido" "<<include>>"..> "Confirmar pago"
+"Registrar cliente" "<<extend>>" ..> "Registrar pedido"
+Logistica --> "Emitir mensualmente listado de insumo por tipo de servicio"
+Logistica --> "Emitir orden de compra de insumos para proveedor"
+Proveedor-->"Emitir orden de compra de insumos para proveedor" 
+Guia --> "Registrar solicitud"
+"Registrar solicitud" "<<include>>"..> "Verificar CUIT"
+AFIP --> "Verificar CUIT" 
+Guia --> "Registrar Guia"
+@endumll
