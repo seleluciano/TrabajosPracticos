@@ -1,0 +1,22 @@
+Requerimientos Funcionales:
+° El sistema debe validar al guia con su CUIT mediante AFIP
+° El sistema debe permitir al guia dar de alta nuevos tipos de servicios
+° El sistema debe proporcionar detalles como título, descripción, ubicación en coordenadas, precio, fecha y hora de inicio, y tipo de servicio.
+°El sistema debe permitir al usuario buscar el servicio por tipo, fecha o ubicacion
+° El sistema debe permitir al usuario poder elegir si desean pagar la totalidad o el 50% como seña
+° El sistema debe permitir al usuario ingresar la cantidad de personas que van a asisitir al sistema y sus datos personales  
+° El sistema debe permitir verifica la transacción a través de un gateway de tarjeta de crédito
+° El sistema debe permitir calcular el monto a pagar que le quedaria al usuario
+° El sistema debe permitr genera vouchers tras el pago 
+° El sistema debe permitir generar un listado de insumos segun las reservas proximas y su faltante de stock 
+° El sistema debe permitir al guia acreditar la asistencia de las personas
+° El sistema debe permitir al guia registrar el estado de la reserva
+
+Requerimientos No Funcionales:
+° El sistema debe permitir crear usuarios y permisos a las personas necesarias
+° El sistema debe estar disponible en todo momento para que los usuarios puedan reservar y acceder a la información.
+° El sistema debe proteger los datos personales
+° El sistema debe ser capaz de manejar un aumento en el número de usuarios y reservas
+° El sistema debe integrarse con el Web Service de AFIP para verificar los CUIT de los guías
+° El sistema debe integrarse con un gateway de tarjeta de crédito para procesar pagos
+° El sistema debe enviar notificaciones por correo electrónico para confirmar reservas y pagos
