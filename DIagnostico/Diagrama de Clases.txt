@@ -52,7 +52,7 @@ class Pago
 importe
 fecha
 }
-class Estado
+enum Estado
 {
 pendiente
 confirmado

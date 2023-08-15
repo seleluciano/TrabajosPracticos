@@ -1,0 +1,10 @@
+title "Registrar turno"
+
+Paciente-->GestorTurno: Pedirturno(DNI)
+GestorTurno-->GestorTurno:Buscarmotivos()
+GestorTurno-->Paciente: Mostrarmotivos(tipos)
+Paciente-->GestorTurno:Seleccionarmotivo(tipo)
+GestorTurno-->Turno: Agregarturno(tipo,DNI)
+Turno-->Turno: Generarcodigo()
+Turno-->GestorTurno: Turnoconfirmado(codigo)
+GestorTurno-->Paciente:Mostrarturno(codigo)

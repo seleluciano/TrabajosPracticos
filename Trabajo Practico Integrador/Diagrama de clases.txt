@@ -15,7 +15,7 @@ fecha
 class ItemPedido{
 cantidad
 }
-class Estado{
+enum Estado{
 confirmado
 pendiente
 cancelado

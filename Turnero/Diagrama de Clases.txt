@@ -1,0 +1,33 @@
+@startuml
+!theme reddress-lightred
+class BOX {
+  numero
+}
+class Paciente{
+  nombre
+  apellido
+  DNI
+  direccion
+  telefono
+}
+class Turno {
+  fecha
+  hora
+  codigo
+}
+class Motivo {
+  Tipo
+  Costo
+}
+enum Tipo{
+  Visita al internado
+  Nuevo turno
+  Emergencias
+  Turno previo
+}
+Paciente "1" -- "1..1*" Turno
+Turno "0..1*" -- "1" BOX
+Turno "1" -- "1..1*" Motivo
+Motivo .. Tipo
+
+@enduml
