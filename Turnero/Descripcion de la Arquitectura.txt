@@ -1,0 +1,15 @@
+Arquitectura de Microservicios:
+
+°Permite dividir la aplicación en componentes más pequeños y autónomos, lo que facilita la gestión, 
+escalabilidad y mantenimiento. 
+°Cada microservicio se enfocaría en una función específica del sistema.
+Microservicios:
+    °Servicio de Turnos: Este microservicio sería responsable de la gestión de los turnos.Manejaría la 
+asignación de números de turno, la información del paciente y su estado (pendiente, atendido, en atención, etc)
+
+    °Servicio de Pantalla de Turnos: Este microservicio se encargaría de proporcionar la información necesaria
+para mostrar en la pantalla de la clínica. Sería responsable de mostrar los turnos en orden, los próximos y los
+anteriores, junto con la información relevante.
+
+    °Servicio de Prioridades: Este microservicio se encargaría de manejar las situaciones de atención prioritaria;
+Sería responsable de marcar los turnos con prioridad y coordinar la atención adelantada.
