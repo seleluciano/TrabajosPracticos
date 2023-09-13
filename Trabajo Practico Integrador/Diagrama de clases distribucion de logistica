@@ -1,0 +1,54 @@
+@startuml
+!theme reddress-lightred
+
+class Cliente{
+nombre
+apellido
+domicilio
+telefono
+DNI
+}
+class Chofer{
+nombre
+apellido
+domicilio
+telefono
+legajo
+}
+class Pedido{
+Estado
+importe
+fecha
+descripcion
+}
+class Pago{
+importe
+fecha
+}
+enum Estado{
+en proceso
+pendiente
+cancelado
+entregado
+}
+
+class "Factura Combustible"{
+importe
+fecha
+numero de factura
+cantidad
+}
+
+class Zona{
+descripcion
+}
+
+
+Cliente "1"-- "1..1*"Pedido
+Pedido "1"-- "1..1*" Pago
+Pedido .. Estado
+Pedido "1..1*"--"1" Chofer
+Pedido "1..1*"--"1" Zona
+Chofer "1" -- "1..1*" "Factura Combustible"
+Chofer "1" -- "1..1*" Zona
+@enduml

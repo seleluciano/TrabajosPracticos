@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+actor Chofer
+actor Tiempo
+actor Cliente
+
+package "Distribucion de logistica"{
+  usecase "Registrar verificacion de pedidos"
+  usecase "Registrar carga de combustible"
+  usecase "Registrar entrega de pedido"
+  usecase "Emitir semanalmente listado de facturas de combustible"
+  usecase "Registrar cobro"
+  usecase "Registrar fragmentacion por zonas" 
+}
+
+
+Chofer --> "Registrar verificacion de pedidos"
+Chofer --> "Registrar carga de combustible"
+Chofer --> "Registrar entrega de pedido"
+Cliente --> "Registrar entrega de pedido"
+"Registrar entrega de pedido" "<<extend>>" ..> "Registrar cobro"
+Chofer --> "Registrar fragmentacion por zonas"
+Tiempo--> "Emitir semanalmente listado de facturas de combustible"
+@endumll
